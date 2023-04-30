@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <style>
+    /* Insert the CSS code here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+    <audio id="audio-player">
+      <source src="D:\movies\128-Raah Mein Unse Mulaqat - Vijaypath 128 Kbps (1).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div>
+      <button id="play-btn">Play</button>
+      <button id="pause-btn">Pause</button>
+    </div>
+  </div>
+
+  <script>
+    // Insert the JavaScript code here
+    const audioPlayer = document.getElementById("audio-player");
+    const playButton = document.getElementById("play-btn");
+    const pauseButton = document.getElementById("pause-btn");
+
+    playButton.addEventListener("click", function() {
+      audioPlayer.play();
+    });
+
+    pauseButton.addEventListener("click", function() {
+      audioPlayer.pause();
+    });
+  </script>
+</body>
+</html>
